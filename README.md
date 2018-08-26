@@ -35,16 +35,16 @@
     actions.click(gotBtn)
     actions.perform()
   ```
-  * 在点击继续阅读按钮之前，最好先判断这个按钮是否存在，如果只有1页的时候，是不会有这个按钮的，判断方法，可以用之前的方法进行判断。<br>
-    获取文章的所有内容:
-    ```python
-    time.sleep(3)
-    #获取包含内容的div 
-    div_text = browser.find_elements_by_class_name("ie-fix")
-    for temp in div_text:
-        text = temp.text
-        print text
-    ```
+  在点击继续阅读按钮之前，最好先判断这个按钮是否存在，如果只有1页的时候，是不会有这个按钮的，判断方法，可以用之前的方法进行判断。<br>
+  获取文章的所有内容:
+  ```python
+  time.sleep(3)
+  #获取包含内容的div 
+  div_text = browser.find_elements_by_class_name("ie-fix")
+  for temp in div_text:
+      text = temp.text
+      print text
+  ```
     
   ## 注意
   有可能会因为百度文库的广告导致将继续阅读按钮遮住，致使点击的时候，点击不到继续阅读按钮，<br>
